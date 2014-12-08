@@ -1,0 +1,487 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>TAP interactive - App 1</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>TAP interactive - App 1</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Printer</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><strong>printer</strong></li>
+</ul>
+<h2>Emulator</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../emulator/gfx.html">gfx</a></li>
+  <li><a href="../emulator/rcu.html">rcu</a></li>
+  <li><a href="../emulator/surface.html">surface</a></li>
+  <li><a href="../emulator/cron.html">cron</a></li>
+  <li><a href="../emulator/classy.html">classy</a></li>
+  <li><a href="../emulator/config.html">config</a></li>
+</ul>
+<h2>Testing</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../testing/main_test.html">main_test</a></li>
+  <li><a href="../testing/view_test.html">view_test</a></li>
+</ul>
+<h2>Modules</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../modules/Controller.html">Controller</a></li>
+  <li><a href="../modules/View.html">View</a></li>
+  <li><a href="../modules/Model.html">Model</a></li>
+  <li><a href="../modules/table_functions.html">table_functions</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Printer <code>printer</code></h1>
+<p>The printer is used to print text on the screen.</p>
+<p>
+
+ The printer is used to print text on the screen. A monospace font is used
+
+ and each letter is saved as it's own image.
+</p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#get_chr_img">get_chr_img (chr, letter_width)</a></td>
+	<td class="summary">A function which finds the image-URL of the ASCII-number passed to it.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#cal_surface_height">cal_surface_height (max_width, max_height, letter_width, letter_height, x, y)</a></td>
+	<td class="summary">Calculates the height of the text surface.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#cal_surface_width">cal_surface_width (max_width)</a></td>
+	<td class="summary">Calculates the width of the text surface.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#text_surface_pos_on_des">text_surface_pos_on_des (x, y)</a></td>
+	<td class="summary">A function which initialize a table representing the destination for the copyfrom-function.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#letter_crop_from_src">letter_crop_from_src (x, y)</a></td>
+	<td class="summary">A function which initialize a table representing the source for the copyfrom-function.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#surface_initialize">surface_initialize (surface_width, surface_height)</a></td>
+	<td class="summary">A function that initialize the text surface.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#fill_surface">fill_surface (img, x, y)</a></td>
+	<td class="summary">A function that pastes a given image to the text surface.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#surface_reset">surface_reset ()</a></td>
+	<td class="summary">A function that resets the text cursor to the upper left corner of the text surface.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#new_line">new_line ()</a></td>
+	<td class="summary">Changes the position of the text cursor to the beginning of the next line
+
+ Changes the position of the text cursor to the beginning of the next line</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#parse_text_to_surface">parse_text_to_surface (text, letter_width, letter_height, max_width, max_height)</a></td>
+	<td class="summary">The function that processes the supplied text and divides it into characters.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#print_text">print_text (mixed_text, x, y, max_width, max_height, font)</a></td>
+	<td class="summary">Prints text on the screen.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "get_chr_img"></a>
+    <strong>get_chr_img (chr, letter_width)</strong>
+    </dt>
+    <dd>
+    A function which finds the image-URL of the ASCII-number passed to it.
+
+ A function which finds the image-URL of the ASCII-number passed to it. Passes the image-variable
+
+ to the fill_surface function which pastes the letter to the text surface.
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">chr</span>
+         the ASCII-number of the letter that shall be pasted to the text surface
+        </li>
+        <li><span class="parameter">letter_width</span>
+         the width of all letters for the specified font
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "cal_surface_height"></a>
+    <strong>cal_surface_height (max_width, max_height, letter_width, letter_height, x, y)</strong>
+    </dt>
+    <dd>
+    Calculates the height of the text surface.
+
+ Calculates the height of the text surface. If the text is shorter than the maximum height, the
+
+ height will be adapted to be just long enough. Otherwise the maximum height will be used, excessive text will not
+
+ be displayed.
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">max_width</span>
+         the specified maximum width in pixels of the text surface
+        </li>
+        <li><span class="parameter">max_height</span>
+         the specified maximum height in pixels of the text surface
+        </li>
+        <li><span class="parameter">letter_width</span>
+         the width in pixels of each letter in the font
+        </li>
+        <li><span class="parameter">letter_height</span>
+         the height in pixels of each letter in the font
+        </li>
+        <li><span class="parameter">x</span>
+         the x-position of the text surface's upper left corner on the screen
+        </li>
+        <li><span class="parameter">y</span>
+         the y-position of the text surface's upper left corner on the screen
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        temp_surface_height the calculated height of the text surface
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "cal_surface_width"></a>
+    <strong>cal_surface_width (max_width)</strong>
+    </dt>
+    <dd>
+    Calculates the width of the text surface.
+
+ Calculates the width of the text surface. The specified maximum width, potential to improve it.
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">max_width</span>
+         the specified maximum width of the text surface in pixels
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        max_width the parameter passed to the function
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "text_surface_pos_on_des"></a>
+    <strong>text_surface_pos_on_des (x, y)</strong>
+    </dt>
+    <dd>
+    A function which initialize a table representing the destination for the copyfrom-function.
+
+ A function which initialize a table representing the destination for the text_surface. Does not scale the text surface.
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x</span>
+         the x-position of the text surface on the screen
+        </li>
+        <li><span class="parameter">y</span>
+         the y-position of the text surface on the screen
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        text_surface_des_rec a table representing the position and scaling of the text surface on the screen
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "letter_crop_from_src"></a>
+    <strong>letter_crop_from_src (x, y)</strong>
+    </dt>
+    <dd>
+    A function which initialize a table representing the source for the copyfrom-function.
+
+ A function which initialize a table specifying which part of the image of the letter to print to the text surface.
+
+ (x, y) = (0, 0) is necessary in order to get the full letter. Otherwise the whole letter will not be used.
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x</span>
+         the x-position of the letter image from where the letter will be copied from
+        </li>
+        <li><span class="parameter">y</span>
+         the y-position of the letter image from where the letter will be copied from
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        letter_src_rec specifying which part of the letter image will be pasted to the text surface
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "surface_initialize"></a>
+    <strong>surface_initialize (surface_width, surface_height)</strong>
+    </dt>
+    <dd>
+    A function that initialize the text surface.
+
+ A function that initializes the text surface and makes it transparent.
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">surface_width</span>
+         the width of the text surface
+        </li>
+        <li><span class="parameter">surface_height</span>
+         the height of the text surface
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "fill_surface"></a>
+    <strong>fill_surface (img, x, y)</strong>
+    </dt>
+    <dd>
+    A function that pastes a given image to the text surface.
+
+ A function that pastes a given image to the text surface at the position specified by the x and y position.
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">img</span>
+         the URL of the letter that shall be pasted to the text surface
+        </li>
+        <li><span class="parameter">x</span>
+         the x-position of the upper left corner of the letter image on the text surface
+        </li>
+        <li><span class="parameter">y</span>
+         the y-position of the upper left corner of the letter image on the text surface
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "surface_reset"></a>
+    <strong>surface_reset ()</strong>
+    </dt>
+    <dd>
+    A function that resets the text cursor to the upper left corner of the text surface.
+
+ A function that resets the text cursor to the upper left corner of the text surface.
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "new_line"></a>
+    <strong>new_line ()</strong>
+    </dt>
+    <dd>
+    Changes the position of the text cursor to the beginning of the next line
+
+ Changes the position of the text cursor to the beginning of the next line
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "parse_text_to_surface"></a>
+    <strong>parse_text_to_surface (text, letter_width, letter_height, max_width, max_height)</strong>
+    </dt>
+    <dd>
+    The function that processes the supplied text and divides it into characters.
+
+ The function that processes the supplied text and divides it into characters. The characters are
+
+ converted to ASCII-numbers which are then passed to the get_chr_img-function. This function also
+
+ handles the format of the printed text, if the next word does not fit the rest of the line the
+
+ word is printed on the next line. Words that are too long to fit a line are divided and written
+
+ over two lines.
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">text</span>
+         a string containing the text to be printed on the text surface
+        </li>
+        <li><span class="parameter">letter_width</span>
+         the width of each letter in pixels
+        </li>
+        <li><span class="parameter">letter_height</span>
+         the height of each letter in pixels
+        </li>
+        <li><span class="parameter">max_width</span>
+         the maximum width of the text surface, in pixels
+        </li>
+        <li><span class="parameter">max_height</span>
+         the maximum height of the text surface, in pixels
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "print_text"></a>
+    <strong>print_text (mixed_text, x, y, max_width, max_height, font)</strong>
+    </dt>
+    <dd>
+    Prints text on the screen.
+
+ Prints a given text on a transparent surface which is placed on the screen. The surface size
+
+ is dependent on the length of the string as well the restrictions of allowed maximum width and
+
+ height.
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">mixed_text</span>
+         a string containing the text to be printed
+        </li>
+        <li><span class="parameter">x</span>
+         the x-position of the text surface's upper left corner on the screen
+        </li>
+        <li><span class="parameter">y</span>
+         the y-position of the text surface's upper left corner on the screen
+        </li>
+        <li><span class="parameter">max_width</span>
+         the allowed width of the text surface in pixels
+        </li>
+        <li><span class="parameter">max_height</span>
+         the allowed height of the text surface in pixels
+        </li>
+        <li><span class="parameter">font</span>
+         a string with the name of the font that shall be used to print the text
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.3</a></i>
+<i style="float:right;">Last updated 2014-12-08 11:05:03 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

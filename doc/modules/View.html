@@ -1,0 +1,674 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>TAP interactive - App 1</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>TAP interactive - App 1</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../modules/Controller.html">Controller</a></li>
+  <li><strong>View</strong></li>
+  <li><a href="../modules/Model.html">Model</a></li>
+  <li><a href="../modules/table_functions.html">table_functions</a></li>
+</ul>
+<h2>Emulator</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../emulator/gfx.html">gfx</a></li>
+  <li><a href="../emulator/rcu.html">rcu</a></li>
+  <li><a href="../emulator/surface.html">surface</a></li>
+  <li><a href="../emulator/cron.html">cron</a></li>
+  <li><a href="../emulator/classy.html">classy</a></li>
+  <li><a href="../emulator/config.html">config</a></li>
+</ul>
+<h2>Printer</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../printer/printer.html">printer</a></li>
+</ul>
+<h2>Testing</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../testing/main_test.html">main_test</a></li>
+  <li><a href="../testing/view_test.html">view_test</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>View</code></h1>
+<p>Handles view functions for the game
+
+ Handles all funcitonality related to displaying
+
+ images and surfaces on the screen.</p>
+<p></p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#view.get_background">view.get_background ()</a></td>
+	<td class="summary">Sets the background and basic elements for the game mode view
+
+ Sets a light grey background for the whole screen.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#view.display_start_menu">view.display_start_menu ()</a></td>
+	<td class="summary">Displays the start menu
+
+Displays the start menu and sets the setting alternatives to the currently chosen ones</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#view.update_menu_highlight">view.update_menu_highlight (highlight_setting_index)</a></td>
+	<td class="summary">Highlights the current settings item in start menu
+
+Given the index of the current highlighted setting item
+
+in start menu the item is higligted with an image.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#view.update_menu_settings_alternative">view.update_menu_settings_alternative (highlight_setting_index, highlighted_alternative_index)</a></td>
+	<td class="summary">Updates the current setting item
+
+Given the index of the current highlighted setting item
+
+in start menu and the chosen setting the item is updated
+
+to display the current setting chosen.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#view.display_cat_menu">view.display_cat_menu ()</a></td>
+	<td class="summary">Displays the categories menu
+
+Displays a pop-up containing the categories menu and sets all the check boxes
+
+to fit the choices made</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#view.update_all_check_boxes">view.update_all_check_boxes ()</a></td>
+	<td class="summary">Function that updates the displaying of all check boxes in the xategories menu
+
+Cleans the surface where the check boxes are displayed and then displays all check boxes.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#view.change_check_box">view.change_check_box (index)</a></td>
+	<td class="summary">Function that changes the current check box image
+
+Changes the current check box image to be checked or unchecked.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#highlight_check_box">highlight_check_box ()</a></td>
+	<td class="summary">Funcion that highlights the current check box in the categories menu
+
+Funcion that highlights the current check box in the categories menu.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#view.set_gameboard_sizes">view.set_gameboard_sizes (no_of_players)</a></td>
+	<td class="summary">Calculates player image sizes and positions
+
+Calculates player image sizes and positions using the number of players and the game board size</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#view.display_question">view.display_question (this_question)</a></td>
+	<td class="summary">Shows the questions and corresponding answer alternatives
+
+Start by setting a light grey background on the upper part of the screen,
+
+the function will then load a picture for the colour buttons and then
+
+print text for title, question and alternatives.The bottom bar will be cleaned to
+
+only contain the exit-button.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#view.display_correct_answer">view.display_correct_answer (current_correct_answer, current_category)</a></td>
+	<td class="summary">Display the correct answer on the screen
+
+The area where the answer alternatives are displayed is cleaned,
+
+and then only the correct answer is displayed with a green border on the color dot.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#view.update_game_board">view.update_game_board ()</a></td>
+	<td class="summary">Updates the game board
+
+Cleans the game board area and displays goal, tracks and players
+
+and bananas (if game mode is set to "Go bananas!")</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#view.display_players">view.display_players ()</a></td>
+	<td class="summary">Displays the players character images.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#view.display_track">view.display_track ()</a></td>
+	<td class="summary">A function that prints the racing tracks for the players.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#view.display_numbers">view.display_numbers ()</a></td>
+	<td class="summary">Displays numbers on the tracks
+
+Displays images as numbers 1-6 in the beginning of the tracks.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#view.display_banana_peel">view.display_banana_peel ()</a></td>
+	<td class="summary">A function that prints banana peels on the racing track.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#view.display_goal">view.display_goal ()</a></td>
+	<td class="summary">Display goal line
+
+Displays an image as goal line</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#view.clean_game_board">view.clean_game_board ()</a></td>
+	<td class="summary">Function that cleans the game board surface
+
+Cleans the game board surface, e.g.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#view.display_win">view.display_win ()</a></td>
+	<td class="summary">Displays the medal winners at the end of the game.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#view.display_image">view.display_image (url, img_size, img_pos)</a></td>
+	<td class="summary">Help function to display an image on the screen
+
+Help function to display an image on the screen given the image path,
+
+the size of the displayed image and start position (upper left corner)
+
+of where to display the image.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "view.get_background"></a>
+    <strong>view.get_background ()</strong>
+    </dt>
+    <dd>
+    Sets the background and basic elements for the game mode view
+
+ Sets a light grey background for the whole screen.
+
+ Adds a logo in the upper right corner and a black bar at the bottom of the screen,
+
+ containing an exit button.
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "view.display_start_menu"></a>
+    <strong>view.display_start_menu ()</strong>
+    </dt>
+    <dd>
+    Displays the start menu
+
+Displays the start menu and sets the setting alternatives to the currently chosen ones
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "view.update_menu_highlight"></a>
+    <strong>view.update_menu_highlight (highlight_setting_index)</strong>
+    </dt>
+    <dd>
+    Highlights the current settings item in start menu
+
+Given the index of the current highlighted setting item
+
+in start menu the item is higligted with an image.
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">highlight_setting_index</span>
+         index of the current highlighted setting option in menu
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "view.update_menu_settings_alternative"></a>
+    <strong>view.update_menu_settings_alternative (highlight_setting_index, highlighted_alternative_index)</strong>
+    </dt>
+    <dd>
+    Updates the current setting item
+
+Given the index of the current highlighted setting item
+
+in start menu and the chosen setting the item is updated
+
+to display the current setting chosen.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">highlight_setting_index</span>
+         index of the current highlighted setting option in menu
+        </li>
+        <li><span class="parameter">highlighted_alternative_index</span>
+         index of the current chosen alternative
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "view.display_cat_menu"></a>
+    <strong>view.display_cat_menu ()</strong>
+    </dt>
+    <dd>
+    Displays the categories menu
+
+Displays a pop-up containing the categories menu and sets all the check boxes
+
+to fit the choices made
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "view.update_all_check_boxes"></a>
+    <strong>view.update_all_check_boxes ()</strong>
+    </dt>
+    <dd>
+    Function that updates the displaying of all check boxes in the xategories menu
+
+Cleans the surface where the check boxes are displayed and then displays all check boxes.
+
+The current check box is highlighted
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "view.change_check_box"></a>
+    <strong>view.change_check_box (index)</strong>
+    </dt>
+    <dd>
+    Function that changes the current check box image
+
+Changes the current check box image to be checked or unchecked.
+
+Highlights the check box afterwards since it disappears under the check box image
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">index</span>
+         index of the current check box
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "highlight_check_box"></a>
+    <strong>highlight_check_box ()</strong>
+    </dt>
+    <dd>
+    Funcion that highlights the current check box in the categories menu
+
+Funcion that highlights the current check box in the categories menu.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "view.set_gameboard_sizes"></a>
+    <strong>view.set_gameboard_sizes (no_of_players)</strong>
+    </dt>
+    <dd>
+    Calculates player image sizes and positions
+
+Calculates player image sizes and positions using the number of players and the game board size
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">no_of_players</span>
+         the number of players chosen for the game
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "view.display_question"></a>
+    <strong>view.display_question (this_question)</strong>
+    </dt>
+    <dd>
+    Shows the questions and corresponding answer alternatives
+
+Start by setting a light grey background on the upper part of the screen,
+
+the function will then load a picture for the colour buttons and then
+
+print text for title, question and alternatives.The bottom bar will be cleaned to
+
+only contain the exit-button.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">this_question</span>
+         the question to be displayed
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "view.display_correct_answer"></a>
+    <strong>view.display_correct_answer (current_correct_answer, current_category)</strong>
+    </dt>
+    <dd>
+    Display the correct answer on the screen
+
+The area where the answer alternatives are displayed is cleaned,
+
+and then only the correct answer is displayed with a green border on the color dot.
+
+An advertisement is displayed next to the correct answer, matching the category of the current question.
+
+In the bottom black bar a help text is displayed.
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">current_correct_answer</span>
+         is the the correct answer of the current question and should be shown
+        </li>
+        <li><span class="parameter">current_category</span>
+         the category of the current question
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "view.update_game_board"></a>
+    <strong>view.update_game_board ()</strong>
+    </dt>
+    <dd>
+    Updates the game board
+
+Cleans the game board area and displays goal, tracks and players
+
+and bananas (if game mode is set to "Go bananas!")
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "view.display_players"></a>
+    <strong>view.display_players ()</strong>
+    </dt>
+    <dd>
+    Displays the players character images.
+
+For each player, display the corresponding character image at start.
+
+Calculate image y-position using image size and number of players.
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "view.display_track"></a>
+    <strong>view.display_track ()</strong>
+    </dt>
+    <dd>
+    A function that prints the racing tracks for the players.
+
+  A function that prints the racing tracks for the players. It is adjusted according to the images size of the players
+
+  and the track belonging to the current player is highlighted by being filled with another color than the other tracks.
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "view.display_numbers"></a>
+    <strong>view.display_numbers ()</strong>
+    </dt>
+    <dd>
+    Displays numbers on the tracks
+
+Displays images as numbers 1-6 in the beginning of the tracks.
+
+The images are scaled to fit the size of the tracks, which depends on the number of players.
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "view.display_banana_peel"></a>
+    <strong>view.display_banana_peel ()</strong>
+    </dt>
+    <dd>
+    A function that prints banana peels on the racing track.
+
+ Displays an image as banana peels for each player. The number of banana peels on each track
+
+ is calculated by dividing the scores to win by 5 and are randomly placed on the track.
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "view.display_goal"></a>
+    <strong>view.display_goal ()</strong>
+    </dt>
+    <dd>
+    Display goal line
+
+Displays an image as goal line
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "view.clean_game_board"></a>
+    <strong>view.clean_game_board ()</strong>
+    </dt>
+    <dd>
+    Function that cleans the game board surface
+
+Cleans the game board surface, e.g.  the surface where the tracks and
+
+player charachters are displayed. The surface is filled with the same
+
+a light grey color, which is used as the background color in the game mode.
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "view.display_win"></a>
+    <strong>view.display_win ()</strong>
+    </dt>
+    <dd>
+    Displays the medal winners at the end of the game.
+
+ Shows a pop-up with character images of the player(s) that won or got
+
+ the second or third place in  the game.
+
+ The positions of the character images is calculated according to number of winners,
+
+ since there can be 1-6 players at each placement.
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "view.display_image"></a>
+    <strong>view.display_image (url, img_size, img_pos)</strong>
+    </dt>
+    <dd>
+    Help function to display an image on the screen
+
+Help function to display an image on the screen given the image path,
+
+the size of the displayed image and start position (upper left corner)
+
+of where to display the image.  If the image dimensions is larger than the
+
+the img_size param the image will be scaled to the dimensions of img_size
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">url</span>
+         image path
+        </li>
+        <li><span class="parameter">img_size</span>
+         size of the displayed image on the format {w=img_width, h=img_height}
+        </li>
+        <li><span class="parameter">img_pos</span>
+         position on the screen where to display the image on the format {x=x_pos, y=y_pos}
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.3</a></i>
+<i style="float:right;">Last updated 2014-12-08 11:05:03 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
