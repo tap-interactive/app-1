@@ -1,0 +1,732 @@
+<?xml version="1.0" encoding ="UTF-8"\>
+<categories>
+	<question>
+		<category>sport</category>
+		<text>Who held the world record for mens 100m in 2010?</text>
+		<red>Usain Bolt</red>
+		<green>Asafa Powell</green>
+		<yellow>Tyson Gay</yellow>
+		<blue>Ben Johnson</blue>
+		<correct_answer>red</correct_answer>
+	</question>
+	<question>
+		<category>sport</category>
+		<text>Which of the following is not part of a track and field decathlon?</text>
+		<red>110m hurdles</red>
+		<green>Pole vault</green>
+		<yellow>Triple jump</yellow>
+		<blue>Discus throw</blue>
+		<correct_answer>yellow</correct_answer>
+	</question>
+	<question>
+		<category>sport</category>	
+		<text>Who hosted the FIFA world cup in 1990?</text>
+		<red>Spain</red>
+		<green>Mexico</green>
+		<yellow>Italy</yellow>
+		<blue>USA</blue>
+		<correct_answer>yellow</correct_answer>
+	</question>
+	<question>
+		<category>sport</category>		
+		<text>What is the best result achieved by the Swedish national handball team in an Olympic Game?</text>
+		<red>First</red>
+		<green>Second</green>
+		<yellow>Third</yellow>
+		<blue>Fourth</blue>
+		<correct_answer>green</correct_answer>
+	</question>
+	<question>
+		<category>sport</category>	
+		<text>What is the official size of an ice hockey rink in the NHL? (length x width)</text>
+		<red>61 m x 30 m</red>
+		<green>52 m x 26 m</green>
+		<yellow>52 m x 30 m</yellow>
+		<blue>61 m x 26 m</blue>
+		<correct_answer>blue</correct_answer>
+	</question>
+	<question>
+		<category>sport</category>	
+		<text>Which men's floorball team have won the most Swedish Championships?</text>
+		<red>Warberg IC</red>
+		<green>Pixbo Wallenstam IBK</green>
+		<yellow>Storvreta IBK</yellow>
+		<blue>IBK Lockerud</blue>
+		<correct_answer>blue</correct_answer>
+	</question>
+	<question>
+		<category>sport</category>	
+		<text>How many players are there on the field in a rugby match?</text>
+		<red>22</red>
+		<green>26</green>
+		<yellow>30</yellow>
+		<blue>34</blue>
+		<correct_answer>yellow</correct_answer>
+	</question>
+	<question>
+		<category>sport</category>	
+		<text>Who is the person to win the most olympic medals of all time?</text>
+		<red>Carl Lewis</red>
+		<green>Mark Spitz</green>
+		<yellow>Larisa Latynina</yellow>
+		<blue>Michael Phelps</blue>
+		<correct_answer>blue</correct_answer>
+	</question>
+	<question>
+		<category>sport</category>	
+		<text>What number did Michael Jordan have on his jersey during his time in Chicago Bulls?</text>
+		<red>3</red>
+		<green>9</green>
+		<yellow>23</yellow>
+		<blue>99</blue>
+		<correct_answer>yellow</correct_answer>
+	</question>
+	<question>
+		<category>sport</category>		
+		<text>According to FIFA, in which country was the earliest forms of football played?</text>
+		<red>China</red>
+		<green>England</green>
+		<yellow>Greece</yellow>
+		<blue>Brazil</blue>
+		<correct_answer>red</correct_answer>
+	</question>
+	<question>
+		<category>family</category>
+		<text>What is the name of Mickey Mouses dog?</text>
+		<red>Pluto</red>
+		<green>Donald</green>
+		<yellow>Minnie</yellow>
+		<blue>Goofy</blue>
+		<correct_answer>red</correct_answer>
+	</question>
+	<question>
+		<category>family</category>
+		<text>Who wrote the books about Pippi Longstocking?</text>
+		<red>Elsa Beskow</red>
+		<green>The Grimm brothers</green>
+		<yellow>Selma Lagerlöf</yellow>
+		<blue>Astrid Lindgren</blue>
+		<correct_answer>blue</correct_answer>
+	</question>
+	<question>
+		<category>family</category>
+		<text>Who of the following is not a friend of Harry Potter?</text>
+		<red>Ron Weasley</red>
+		<green>Hermione Granger</green>
+		<yellow>Draco Malfoy</yellow>
+		<blue>Neville Longbottom</blue>
+		<correct_answer>yellow</correct_answer>
+	</question>
+	<question>
+		<category>family</category>
+		<text> What colour is Bob the builders helmet? </text>
+		<red>Red</red>
+		<green>Green</green>
+		<yellow>Yellow</yellow>
+		<blue>Blue</blue>
+		<correct_answer>yellow</correct_answer>
+	</question>
+	<question>
+		<category>family</category>
+		<text>What is the name of the bear in The Jungle Book?</text>
+		<red>Baloo</red>
+		<green>Bagheera</green>
+		<yellow>Mowgli</yellow>
+		<blue>Shere Khan</blue>
+		<correct_answer>red</correct_answer>
+	</question>
+	<question>
+		<category>family</category>
+		<text>Where does the majority of Peter Pan's adventures take place?</text>
+		<red>Camelot</red>
+		<green>Neverland</green>
+		<yellow>England</yellow>
+		<blue>Graceland</blue>
+		<correct_answer>green</correct_answer>
+	</question>
+	<question>
+		<category>family</category>
+		<text>What is the name of Woody and Buzz Lightyear's owner in the movie Toy Story?</text>
+		<red>Sid</red>
+		<green>Sandy</green>
+		<yellow>Andy</yellow>
+		<blue>Cindy</blue>
+		<correct_answer>yellow</correct_answer>
+	</question>
+	<question>
+		<category>family</category>
+		<text>In which town does the caveman family The Flintstones live?</text>
+		<red>Rockaway Beach</red>
+		<green>Little Rock</green>
+		<yellow>Rockville</yellow>
+		<blue>Bedrock</blue>
+		<correct_answer>blue</correct_answer>
+	</question>
+	<question>
+		<category>family</category>
+		<text>From what country does Lego come from?</text>
+		<red>England</red>
+		<green>Denmark</green>
+		<yellow>France</yellow>
+		<blue>USA</blue>
+		<correct_answer>green</correct_answer>
+	</question>
+	<question>
+		<category>family</category>
+		<text>What sort of animal is the video game character Sonic?</text>
+		<red>Hedgehog</red>
+		<green>Fox</green>
+		<yellow>Turtle</yellow>
+		<blue>Dog</blue>
+		<correct_answer>red</correct_answer>
+	</question>
+	<question>
+		<category>music</category>
+		<text>How many members has the popular band One Direction?</text>
+		<red>3</red>
+		<green>4</green>
+		<yellow>5</yellow>
+		<blue>6</blue>
+		<correct_answer>yellow</correct_answer>
+	</question>
+	<question>
+		<category>music</category>
+		<text>Who is Reginald Dwight better known as?</text>
+		<red>Rod Stewart</red>
+		<green>Elton John </green>
+		<yellow> Alice Cooper</yellow>
+		<blue>Eddie Van Halen</blue>
+		<correct_answer>green</correct_answer>
+	</question>
+	<question>
+		<category>music</category>
+		<text>Who wrote the opera Aida?</text>
+		<red>Mozart</red>
+		<green>Wagner</green>
+		<yellow>Verdi</yellow>
+		<blue>Rossini</blue>
+		<correct_answer>yellow</correct_answer>
+	</question>
+	<question>
+		<category>music</category>
+		<text>Waltz is danced in what rythm?</text>
+		<red>One beat of measure</red>
+		<green>Two beat of measure</green>
+		<yellow>Three beat of measure</yellow>
+		<blue>Four beat of measure</blue>
+		<correct_answer>yellow</correct_answer>
+	</question>
+	<question>
+		<category>music</category>
+		<text>The Reel is a dance that comes from which culture?</text>
+		<red>Celtic</red>
+		<green>Gothic</green>
+		<yellow>Frankish</yellow>
+		<blue>Latin</blue>
+		<correct_answer>red</correct_answer>
+	</question>
+	<question>
+		<category>music</category>
+		<text>How many strings has a mandolin?</text>
+		<red>Four</red>
+		<green>Six</green>
+		<yellow>Eight</yellow>
+		<blue>Twelve</blue>
+		<correct_answer>yellow</correct_answer>
+	</question>
+	<question>
+		<category>music</category>
+		<text>What was the name of Bob Marley's band?</text>
+		<red>Kingston Kings</red>
+		<green>The Wailers</green>
+		<yellow>The Reggae gang</yellow>
+		<blue>The Waves</blue>
+		<correct_answer>green</correct_answer>
+	</question>
+	<question>
+		<category>music</category>
+		<text>The musical West Side Story is based on what classical story?</text>
+		<red>The Three Musketeers</red>
+		<green>Romeo and Juliet</green>
+		<yellow>Tarzan</yellow>
+		<blue>Divina Comedia</blue>
+		<correct_answer>green</correct_answer>
+	</question>
+	<question>
+		<category>music</category>
+		<text>Who is the singer in Dire Straits?</text>
+		<red>Eric Clapton</red>
+		<green>Elton John</green>
+		<yellow>Mick Jagger</yellow>
+		<blue>Mark Knopfler</blue>
+		<correct_answer>blue</correct_answer>
+	</question>
+	<question>
+		<category>music</category>
+		<text>Which is the most sold record of all time?</text>
+		<red>Pink Floyd - Dark Side of the Moon</red>
+		<green>Michael Jackson - Thriller</green>
+		<yellow>AC/DC - Back in Black</yellow>
+		<blue>The Eagles - Greatest Hits</blue>
+		<correct_answer>green</correct_answer>
+	</question>
+	<question>
+		<category>geography</category>
+		<text>What is the capital of Mongolia?</text>
+		<red>Pyongyang</red>
+		<green>Ulanbataar</green>
+		<yellow>Darkhan</yellow>
+		<blue>Hinggan</blue>
+		<correct_answer>green</correct_answer>
+	</question>
+	<question>
+		<category>geography</category>
+		<text>In what ocean is the eastern end of the panama canal?</text>
+		<red>The pacific ocean</red>
+		<green>The atlantic ocean</green>
+		<yellow>The indian ocean</yellow>
+		<blue>The mediterranean</blue>
+		<correct_answer>red</correct_answer>
+	</question>
+	<question>
+		<category>geography</category>
+		<text>In which continent is Eritrea?</text>
+		<red>South America</red>
+		<green>Asia</green>
+		<yellow>Europe</yellow>
+		<blue>Africa</blue>
+		<correct_answer>blue</correct_answer>
+	</question>
+	<question>
+		<category>geography</category>
+		<text>Which of the following countries does not border to Russia?</text>
+		<red>Kazakhstan</red>
+		<green>Lithuania</green>
+		<yellow>Azerbaijan</yellow>
+		<blue>North Korea</blue>
+		<correct_answer>green</correct_answer>
+	</question>
+	<question>
+		<category>geography</category>
+		<text>How much of the earths surface is covered with water?</text>
+		<red>About 60 percent</red>
+		<green>About 65 percent</green>
+		<yellow>About 70 percent</yellow>
+		<blue>About 75 percent</blue>
+		<correct_answer>yellow</correct_answer>
+	</question>
+	<question>
+		<category>geography</category>
+		<text>Which is the highest mountain on earth measured from the base to the peak insted of from the sea level?</text>
+		<red>K2</red>
+		<green>Mount Everest</green>
+		<yellow>Mauna Kea</yellow>
+		<blue>Matterhorn</blue>
+		<correct_answer>yellow</correct_answer>
+	</question>
+	<question>
+		<category>geography</category>
+		<text>Which is the largest desert on earth?</text>
+		<red>Sahara</red>
+		<green>Kalahari</green>
+		<yellow>Arctic</yellow>
+		<blue>Antarctica</blue>
+		<correct_answer>blue</correct_answer>
+	</question>
+	<question>
+		<category>geography</category>
+		<text>Which is the fifht largest country in the world?</text>
+		<red>USA</red>
+		<green>Brazil</green>
+		<yellow>Australia</yellow>
+		<blue>India</blue>
+		<correct_answer>green</correct_answer>
+	</question>
+	<question>
+		<category>geography</category>
+		<text>How many lakes are there in Finland?</text>
+		<red>74 888</red>
+		<green>129 888</green>
+		<yellow>187 888</yellow>
+		<blue>213 888</blue>
+		<correct_answer>yellow</correct_answer>
+	</question>
+	<question>
+		<category>geography</category>
+		<text>Which is the world's fourth most populated country?</text>
+		<red>USA</red>
+		<green>Brazil</green>
+		<yellow>Indonesia</yellow>
+		<blue>Pakistan</blue>
+		<correct_answer>yellow</correct_answer>
+	</question>
+	<question>
+		<category>history</category>
+		<text>Who led the Brittish to victory in the battle at Trafalgar?</text>
+		<red>Lord Nelson</red>
+		<green>Duke Wellington</green>
+		<yellow>Lord Lloyd</yellow>
+		<blue>Sir Cromwell</blue>
+		<correct_answer>red</correct_answer>
+	</question>
+	<question>
+		<category>history</category>
+		<text>The allied invasion of normandy in world war two took place on what date?</text>
+		<red>Sixth of June</red>
+		<green>Fourth of July</green>
+		<yellow>Seventh of May</yellow>
+		<blue>Seventeenth of May</blue>
+		<correct_answer>red</correct_answer>
+	</question>
+	<question>
+		<category>history</category>
+		<text>What is the name of the Spanish leader who fought the Aztecs?</text>
+		<red>Philippo Magellan</red>
+		<green>Hernan Cortez</green>
+		<yellow>Francisco Pizarro</yellow>
+		<blue>Don Quixote</blue>
+		<correct_answer>green</correct_answer>
+	</question>
+	<question>
+		<category>history</category>
+		<text>Which of the following did not have a mustache?</text>
+		<red>Kaiser Vilhelm of Germany</red>
+		<green>Abraham Lincoln</green>
+		<yellow>Freddie Mercury</yellow>
+		<blue>Josef Stalin</blue>
+		<correct_answer>green</correct_answer>
+	</question>
+	<question>
+		<category>history</category>
+		<text>Who introduced hereditary monarchy in Sweden?</text>
+		<red>Erik of Pomerania</red>
+		<green>Gustav Vasa</green>
+		<yellow>Magnus Eriksson</yellow>
+		<blue>Birger Jarl</blue>
+		<correct_answer>green</correct_answer>
+	</question>
+	<question>
+		<category>history</category>
+		<text>Which of the following countries was not one of the founding members of the European Union?</text>
+		<red>Belgium</red>
+		<green>Netherlands</green>
+		<yellow>Italy</yellow>
+		<blue>Great Britain</blue>
+		<correct_answer>blue</correct_answer>
+	</question>
+	<question>
+		<category>history</category>
+		<text>What year did the Berlin Wall fall?</text>
+		<red>1987</red>
+		<green>1989</green>
+		<yellow>1991</yellow>
+		<blue>1993</blue>
+		<correct_answer>green</correct_answer>
+	</question>
+	<question>
+		<category>history</category>
+		<text>Who called for the first crusade to recapture Jerusalem in year 1095?</text>
+		<red>Pope Benedict IX</red>
+		<green>Pope Urban II</green>
+		<yellow>Pope Gregory VII</yellow>
+		<blue>Pope Victor II</blue>
+		<correct_answer>green</correct_answer>
+	</question>
+	<question>
+		<category>history</category>
+		<text>Which city hade the worlds first subways?</text>
+		<red>New York</red>
+		<green>London</green>
+		<yellow>Boston</yellow>
+		<blue>Tokyo</blue>
+		<correct_answer>yellow</correct_answer>
+	</question>
+	<question>
+		<category>history</category>
+		<text>What was the lastest war Sweden were involved in?</text>
+		<red>The Napoleonic Wars</red>
+		<green>The Thirty Year War</green>
+		<yellow>The Finnish War</yellow>
+		<blue>The Great Northern War</blue>
+		<correct_answer>yellow</correct_answer>
+	</question>
+	<question>
+		<category>science</category>
+		<text>Which is the third planet from the sun?</text>
+		<red>Venus</red>
+		<green>Saturn</green>
+		<yellow>Mars</yellow>
+		<blue>Earth</blue>
+		<correct_answer>blue</correct_answer>
+	</question>
+	<question>
+		<category>science</category>
+		<text>What is the chemical notation for iron?</text>
+		<red>He</red>
+		<green>Hg</green>
+		<yellow>Fe</yellow>
+		<blue>I</blue>
+		<correct_answer>yellow</correct_answer>
+	</question>
+	<question>
+		<category>science</category>
+		<text>What is the coldest possible temperature to achieve?</text>
+		<red>minus 1000 degrees Celsius</red>
+		<green>minus 578 degrees Celsius</green>
+		<yellow>minus 273 degrees Celsius</yellow>
+		<blue>There is no limit</blue>
+		<correct_answer>yellow</correct_answer>
+	</question>
+	<question>
+		<category>science</category>
+		<text>What substance is used in pencils?</text>
+		<red>Charcoal</red>
+		<green>Graphite</green>
+		<yellow>Lead</yellow>
+		<blue>Iron</blue>
+		<correct_answer>red</correct_answer>
+	</question>
+	<question>
+		<category>science</category>
+		<text>What is the average salinity if sea water?</text>
+		<red>2 percent</red>
+		<green>2,5 percent</green>
+		<yellow>3 percent</yellow>
+		<blue>3,5 percent</blue>
+		<correct_answer>red</correct_answer>
+	</question>
+	<question>
+		<category>science</category>
+		<text>Which is the hardest substance available on earth?</text>
+		<red>Gold</red>
+		<green>Granite</green>
+		<yellow>Platinum</yellow>
+		<blue>Diamond</blue>
+		<correct_answer>blue</correct_answer>
+	</question>
+	<question>
+		<category>science</category>
+		<text>What is it in plants that make them green?</text>
+		<red>Chlorophyll</red>
+		<green>Chloroform</green>
+		<yellow>Chloride</yellow>
+		<blue>Sunlight</blue>
+		<correct_answer>red</correct_answer>
+	</question>
+	<question>
+		<category>science</category>
+		<text>Who is said to have laid in the bath while discovering what became his most famous principle?</text>
+		<red>Pythagoras</red>
+		<green>Archimedes</green>
+		<yellow>Plato</yellow>
+		<blue>Aristoteles</blue>
+		<correct_answer>green</correct_answer>
+	</question>
+	<question>
+		<category>science</category>
+		<text>What do you measure with a barometric?</text>
+		<red>Pressure</red>
+		<green>Depth of waters</green>
+		<yellow>Moisture</yellow>
+		<blue>Magnitude of sound</blue>
+		<correct_answer>red</correct_answer>
+	</question>
+	<question>
+		<category>science</category>
+		<text>What does a mychologist study?</text>
+		<red>Mamals</red>
+		<green>Fungi</green>
+		<yellow>Mosses</yellow>
+		<blue>Plankton</blue>
+		<correct_answer>green</correct_answer>
+	</question>
+	<question>
+		<category>movies</category>
+		<text>What is the name of the snowman in the movie Frozen from 2013?</text>
+		<red>Hans</red>
+		<green>Olaf</green>
+		<yellow>Sven</yellow>
+		<blue>Kristoff</blue>
+		<correct_answer>green</correct_answer>
+	</question>
+	<question>
+		<category>movies</category>
+		<text>From which movie comes the famous quote "I will find you and I will kill you"?</text>
+		<red>Finding Nemo</red>
+		<green>Batman begins</green>
+		<yellow>Star wars - the return of the jedi</yellow>
+		<blue>Taken</blue>
+		<correct_answer>blue</correct_answer>
+	</question>
+	<question>
+		<category>movies</category>
+		<text>Who is the confused fish helping Nemos dad Marvin in the movie Finding Nemo?</text>
+		<red>Sarah</red>
+		<green>Doris</green>
+		<yellow>Lisa</yellow>
+		<blue>Ariel</blue>
+		<correct_answer>green</correct_answer>
+	</question>
+	<question>
+		<category>movies</category>
+		<text>Who plays the role as Obi Wan Kenobi in the three newer Star Wars movies?</text>
+		<red>Liam Neeson</red>
+		<green>Ewan McGregor</green>
+		<yellow>Bruce Willis</yellow>
+		<blue>Ariel</blue>
+		<correct_answer>green</correct_answer>
+	</question>
+	<question>
+		<category>movies</category>
+		<text>Who plays the role as Gandalf in the Lord of the rings movies?</text>
+		<red>Christopher Lee</red>
+		<green>Charles Dance</green>
+		<yellow>Ian McDiarmid</yellow>
+		<blue>Ian Mckellen</blue>
+		<correct_answer>blue</correct_answer>
+	</question>
+	<question>
+		<category>movies</category>
+		<text>Who plays James Bond in the movie Skyfall?</text>
+		<red>Pierce Brosnan</red>
+		<green>Sean Connery</green>
+		<yellow>Daniel Craig</yellow>
+		<blue>Roger Moore</blue>
+		<correct_answer>yellow</correct_answer>
+	</question>
+	<question>
+		<category>movies</category>
+		<text>What is the name of the technician in the movies about James Bond?</text>
+		<red>M</red>
+		<green>X</green>
+		<yellow>C</yellow>
+		<blue>Q</blue>
+		<correct_answer>blue</correct_answer>
+	</question>
+	<question>
+		<category>movies</category>
+		<text>Which popular social network is the movie The Social Network about?</text>
+		<red>Facebook</red>
+		<green>Twitter</green>
+		<yellow>Myspace</yellow>
+		<blue>Instagram</blue>
+		<correct_answer>red</correct_answer>
+	</question>
+	<question>
+		<category>movies</category>
+		<text>Who did Charlie Chaplin impersonate in the movie The Dictator?</text>
+		<red>Mussolini</red>
+		<green>Hitler</green>
+		<yellow>Stalin</yellow>
+		<blue>Mao</blue>
+		<correct_answer>green</correct_answer>
+	</question>
+	<question>
+		<category>movies</category>
+		<text>Who directed the first Jaws movie?</text>
+		<red>Steven Spielberg</red>
+		<green>Peter Jackson</green>
+		<yellow>Alfred Hitchcock</yellow>
+		<blue>Quentin Tarantino</blue>
+		<correct_answer>red</correct_answer>
+	</question>
+	<question>
+		<category>movies</category>
+		<text>For how long did the sleeping beauty sleep?</text>
+		<red>Until midnight</red>
+		<green>Until moon</green>
+		<yellow>For a whole year</yellow>
+		<blue>For 100 years</blue>
+		<correct_answer>blue</correct_answer>
+	</question>
+	<question>
+		<category>miscellaneous</category>
+		<text>What is the finnish word for pig?</text>
+		<red>Sika</red>
+		<green>Nassi</green>
+		<yellow>Hirvi</yellow>
+		<blue>Koira</blue>
+		<correct_answer>red</correct_answer>
+	</question>
+	<question>
+		<category>miscellaneous</category>
+		<text>What does a diver mean if he gives you thumbs up while under water?</text>
+		<red>Everything is ok</red>
+		<green>He has high oxygen level</green>
+		<yellow>Check your oxygen level</yellow>
+		<blue>He wants to go up</blue>
+		<correct_answer>blue</correct_answer>
+	</question>
+	<question>
+		<category>miscellaneous</category>
+		<text>Indonesia has been a colony of which country?</text>
+		<red>Great Britain</red>
+		<green>France</green>
+		<yellow>Portugal</yellow>
+		<blue>Netherlands</blue>
+		<correct_answer>blue</correct_answer>
+	</question>
+	<question>
+		<category>miscellaneous</category>
+		<text>A blue whale weighs as much as how many elephants?</text>
+		<red>15</red>
+		<green>25</green>
+		<yellow>35</yellow>
+		<blue>45</blue>
+		<correct_answer>yellow</correct_answer>
+	</question>
+	<question>
+		<category>miscellaneous</category>
+		<text>Which is the loudest animal?</text>
+		<red>Sperm Whale</red>
+		<green>Howler Monkey</green>
+		<yellow>Bush Cricket</yellow>
+		<blue>Lion</blue>
+		<correct_answer>red</correct_answer>
+	</question>
+	<question>
+		<category>miscellaneous</category>
+		<text>How many words are there in the Bible?</text>
+		<red>700 000</red>
+		<green>800 000</green>
+		<yellow>900 000</yellow>
+		<blue>1 000 000</blue>
+		<correct_answer>green</correct_answer>
+	</question>
+	<question>
+		<category>miscellaneous</category>
+		<text>Who was the greek god of the underworld?</text>
+		<red>Zeus</red>
+		<green>Poseidon</green>
+		<yellow>Hades</yellow>
+		<blue>Apollo</blue>
+		<correct_answer>yellow</correct_answer>
+	</question>
+	<question>
+		<category>miscellaneous</category>
+		<text>Which of the following is not in any language a word for Hello?</text>
+		<red>Zdravo</red>
+		<green>Tere</green>
+		<yellow>Nyob zoo</yellow>
+		<blue>Jes</blue>
+		<correct_answer>blue</correct_answer>
+	</question>
+	<question>
+		<category>miscellaneous</category>
+		<text>Which is the world's largest zoo?</text>
+		<red>Henry Doorly Zoo</red>
+		<green>Berlin Zoologial Garden</green>
+		<yellow>Beijing Zoo</yellow>
+		<blue>Bronx Zoo</blue>
+		<correct_answer>red</correct_answer>
+	</question>
+	<question>
+		<category>miscellaneous</category>
+		<text>How many official languages does India have?</text>
+		<red>1</red>
+		<green>0</green>
+		<yellow>38</yellow>
+		<blue>22</blue>
+		<correct_answer>blue</correct_answer>
+	</question>
+</categories>
