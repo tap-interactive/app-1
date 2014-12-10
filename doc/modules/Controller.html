@@ -1,0 +1,631 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>TAP interactive - App 1</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>TAP interactive - App 1</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><strong>Controller</strong></li>
+  <li><a href="../modules/View.html">View</a></li>
+  <li><a href="../modules/Model.html">Model</a></li>
+  <li><a href="../modules/table_functions.html">table_functions</a></li>
+</ul>
+<h2>Emulator</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../emulator/gfx.html">gfx</a></li>
+  <li><a href="../emulator/rcu.html">rcu</a></li>
+  <li><a href="../emulator/surface.html">surface</a></li>
+  <li><a href="../emulator/cron.html">cron</a></li>
+  <li><a href="../emulator/classy.html">classy</a></li>
+  <li><a href="../emulator/config.html">config</a></li>
+</ul>
+<h2>Printer</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../printer/printer.html">printer</a></li>
+</ul>
+<h2>Testing</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../testing/main_test.html">main_test</a></li>
+  <li><a href="../testing/view_test.html">view_test</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>Controller</code></h1>
+<p>Handles the logic functions of the game
+
+ Handles all functionality related to initiating
+
+ and playing the game.</p>
+<p> Also handles navigating
+
+ the menu.
+</p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#menu_start">menu_start ()</a></td>
+	<td class="summary">Function called to set the game in menu mode
+
+Calls view to display the menu and sets game mode to "menu"</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#reset_game">reset_game ()</a></td>
+	<td class="summary">Function that resets the game
+
+Resets all game variables</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#change_setting">change_setting (key)</a></td>
+	<td class="summary">A function which switches the selected setting in the menu.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#change_alternative">change_alternative (key)</a></td>
+	<td class="summary">A function used to change the selected alternative for a given setting
+
+ A function used to change the selected alternative for a given setting.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#move_between_categories">move_between_categories (key)</a></td>
+	<td class="summary">A function which moves between the categories in the category menu.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#control_categories">control_categories ()</a></td>
+	<td class="summary">Function that checks if the all categories are selected or if they have
+
+ been customized.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#update_cat_choice">update_cat_choice ()</a></td>
+	<td class="summary">Function that selects or unselects a category
+
+ If the "ok" key is pressed while navigating the category menu, this function will be called.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#onKey">onKey (key, state)</a></td>
+	<td class="summary">Handles all incoming changes to the keys of the remote control.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#game">game ()</a></td>
+	<td class="summary">Function that starts an instance of the game
+
+Will call for appropriate functions that are needed to play the game.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#set_game_length">set_game_length ()</a></td>
+	<td class="summary">Function that set the length of a game
+
+Will assign the variable scores_to_win to the game length value selected
+
+in the start menu.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#init_players">init_players ()</a></td>
+	<td class="summary">Function to initiate players for a game
+
+The function will start by retrieving number of players from the settings
+
+set by the user in the start menu.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#init_bananas">init_bananas ()</a></td>
+	<td class="summary">Function to initiate banana peel positions for each player
+
+Adds random bananas to certain positions for every player in the game.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#add_point">add_point (player_id)</a></td>
+	<td class="summary">Adds a point to a given player.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#remove_point">remove_point (player_id)</a></td>
+	<td class="summary">Remove a point to a given player.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#check_win">check_win ()</a></td>
+	<td class="summary">Checks if any of the players has won the game.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#change_current_player">change_current_player ()</a></td>
+	<td class="summary">Updates current player.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#execute_turn">execute_turn ()</a></td>
+	<td class="summary">Function that prompts the user to answer a question and adds a point to the player if the answer is correct.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#init_categories">init_categories ()</a></td>
+	<td class="summary">Function that initiates categories.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#get_question">get_question ()</a></td>
+	<td class="summary">Function that returns a new question.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "menu_start"></a>
+    <strong>menu_start ()</strong>
+    </dt>
+    <dd>
+    Function called to set the game in menu mode
+
+Calls view to display the menu and sets game mode to "menu"
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "reset_game"></a>
+    <strong>reset_game ()</strong>
+    </dt>
+    <dd>
+    Function that resets the game
+
+Resets all game variables
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "change_setting"></a>
+    <strong>change_setting (key)</strong>
+    </dt>
+    <dd>
+    A function which switches the selected setting in the menu.
+
+ A function which switches the selected setting in the menu. The function only handles the "up" and "down" buttons,
+
+ all other buttons are ignored.
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">key</span>
+         the key pressed
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "change_alternative"></a>
+    <strong>change_alternative (key)</strong>
+    </dt>
+    <dd>
+    A function used to change the selected alternative for a given setting
+
+ A function used to change the selected alternative for a given setting.  The function only handles the
+
+ "left" and the "right" button, all other buttons ignored.
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">key</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "move_between_categories"></a>
+    <strong>move_between_categories (key)</strong>
+    </dt>
+    <dd>
+    A function which moves between the categories in the category menu.
+
+ A function which moves between the categories in the category menu. The function only handles the "up","down", "left" and "right" buttons,
+
+ all other buttons are ignored.
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">key</span>
+         the key pressed
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "control_categories"></a>
+    <strong>control_categories ()</strong>
+    </dt>
+    <dd>
+    Function that checks if the all categories are selected or if they have
+
+ been customized.
+
+ Function that checks if the all categories are selected or if they have
+
+ been customized.
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "update_cat_choice"></a>
+    <strong>update_cat_choice ()</strong>
+    </dt>
+    <dd>
+    Function that selects or unselects a category
+
+ If the "ok" key is pressed while navigating the category menu, this function will be called.
+
+ It will change the boolean value in the set_category table to the opposite,
+
+ indicating that a category have been selected or unselected
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "onKey"></a>
+    <strong>onKey (key, state)</strong>
+    </dt>
+    <dd>
+    Handles all incoming changes to the keys of the remote control.
+
+ Handles all incoming changes to the keys of the remote control.
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">key</span>
+         the key which state has been changed
+        </li>
+        <li><span class="parameter">state</span>
+         which state the key is presently in
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "game"></a>
+    <strong>game ()</strong>
+    </dt>
+    <dd>
+    Function that starts an instance of the game
+
+Will call for appropriate functions that are needed to play the game.
+
+Starts by loading questions and setting game_state to "game". It will then
+
+initialize players, set a game length, initalize bananas if the game mode is "Go bananas!",
+
+get a question for the start of the game, get a background. Last the function calls for
+
+the view functions that is needed to visualize the game board.
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "set_game_length"></a>
+    <strong>set_game_length ()</strong>
+    </dt>
+    <dd>
+    Function that set the length of a game
+
+Will assign the variable scores_to_win to the game length value selected
+
+in the start menu.
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "init_players"></a>
+    <strong>init_players ()</strong>
+    </dt>
+    <dd>
+    Function to initiate players for a game
+
+The function will start by retrieving number of players from the settings
+
+set by the user in the start menu.  It will then initialize the correct number
+
+of players and set appropriate data values. The image size assigned
+
+to a player varies depending on how many players that are going to play.
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "init_bananas"></a>
+    <strong>init_bananas ()</strong>
+    </dt>
+    <dd>
+    Function to initiate banana peel positions for each player
+
+Adds random bananas to certain positions for every player in the game.
+
+Only used in the "go bananas!" game mode.
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "add_point"></a>
+    <strong>add_point (player_id)</strong>
+    </dt>
+    <dd>
+    Adds a point to a given player.
+
+Adds a point to the player given by player_id
+
+and calls the move player function afterwards so the positions are updated.
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">player_id</span>
+         player id
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "remove_point"></a>
+    <strong>remove_point (player_id)</strong>
+    </dt>
+    <dd>
+    Remove a point to a given player.
+
+Remove a point to the player given by player_id
+
+and calls the move player function afterwards so the positions are updated.
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">player_id</span>
+         player id
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "check_win"></a>
+    <strong>check_win ()</strong>
+    </dt>
+    <dd>
+    Checks if any of the players has won the game.
+
+Checks the score of every player to see if any of the players has
+
+reached the number of scores to win. If a player have received enough points,
+
+it is assigned a place depending on if the player is first, second or third
+
+to reach the finish line. If enough players have passed the finish line, the
+
+game will end.
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "change_current_player"></a>
+    <strong>change_current_player ()</strong>
+    </dt>
+    <dd>
+    Updates current player.
+
+Updates the current player by adding 1 to the current_player variable.
+
+Special case if current player is the last one, then the current player is the first player.
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "execute_turn"></a>
+    <strong>execute_turn ()</strong>
+    </dt>
+    <dd>
+    Function that prompts the user to answer a question and adds a point to the player if the answer is correct.
+
+ If the current player is not the last player the function calls change_current_palyer().
+
+ If current player is last player the function loops over all players and checks if the answer of that player is correct.
+
+ If it is, the player gets a point. If certain conditions (game mode, current points) is met points could be removed
+
+ from the player. After all the answers of all players have been checked, the function displays the right answer by
+
+ setting display_answer to true. Then the function runs the check_win() function.
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "init_categories"></a>
+    <strong>init_categories ()</strong>
+    </dt>
+    <dd>
+    Function that initiates categories.
+
+ Function that initiates categories by checking which categories the user selected
+
+ in the category menu. If a category have been selected in the start menu, it and its
+
+ questions are inserted in the questions_in_game table. The categories_in_game table
+
+ is also updated. If a category is not selected the n_o_questions variable is decremented by
+
+ number of questions that were not included.
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "get_question"></a>
+    <strong>get_question ()</strong>
+    </dt>
+    <dd>
+    Function that returns a new question.
+
+ Function that finds and returns a random question from the table of available questions.
+
+ If there are no questions it will start by loading the questions data. Once a question is
+
+ selected it is returned and removed from the table of available questions and the number of
+
+ available questions is decreased by 1. If all questions in a category is used, the category
+
+ is removed from the available questions table and from the categories_in_game table.
+
+
+
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.3</a></i>
+<i style="float:right;">Last updated 2014-12-08 11:05:03 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

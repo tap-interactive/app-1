@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>TAP interactive - App 1</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>TAP interactive - App 1</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Emulator</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><strong>gfx</strong></li>
+  <li><a href="../emulator/rcu.html">rcu</a></li>
+  <li><a href="../emulator/surface.html">surface</a></li>
+  <li><a href="../emulator/cron.html">cron</a></li>
+  <li><a href="../emulator/classy.html">classy</a></li>
+  <li><a href="../emulator/config.html">config</a></li>
+</ul>
+<h2>Printer</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../printer/printer.html">printer</a></li>
+</ul>
+<h2>Testing</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../testing/main_test.html">main_test</a></li>
+  <li><a href="../testing/view_test.html">view_test</a></li>
+</ul>
+<h2>Modules</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../modules/Controller.html">Controller</a></li>
+  <li><a href="../modules/View.html">View</a></li>
+  <li><a href="../modules/Model.html">Model</a></li>
+  <li><a href="../modules/table_functions.html">table_functions</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Emulator <code>gfx</code></h1>
+<p>The gfx part of the emulator for the Zenterio API
+
+ The gfx part of the emulator for the Zenterio API.</p>
+<p> It is based on the game engine Love2D. Not
+
+ all functions from the Zenterio API have been implemented.
+</p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#set_auto_update">set_auto_update (bool)</a></td>
+	<td class="summary">Supposed to automatically use gfx.update() when screen properties are changed.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#new_surface">new_surface (width, height)</a></td>
+	<td class="summary">Emulates an instance of the surface data type.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#get_memory_use">get_memory_use ()</a></td>
+	<td class="summary">Supposed to return the memory usage of the application.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#get_memory_limit">get_memory_limit ()</a></td>
+	<td class="summary">Supposed to returns the maximum bytes of graphics memory the application is allowed to use.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#update">update ()</a></td>
+	<td class="summary">Makes any pending changes to the screen visible.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#loadpng">loadpng (path)</a></td>
+	<td class="summary">Emulates the gfx.loadpng(path) function from the Zenterio API.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#loadjpeg">loadjpeg (path)</a></td>
+	<td class="summary">Emulates the gfx.loadjpeg(path) function from the Zenterio API.</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "set_auto_update"></a>
+    <strong>set_auto_update (bool)</strong>
+    </dt>
+    <dd>
+    Supposed to automatically use gfx.update() when screen properties are changed.
+
+ Supposed to automatically use gfx.update() when screen properties are changed. Not implemented
+
+ in the emulator, the emulator behaves like gfx.set_auto_update(bool) is set to true at all times.
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">bool</span>
+         not used
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "new_surface"></a>
+    <strong>new_surface (width, height)</strong>
+    </dt>
+    <dd>
+    Emulates an instance of the surface data type.
+
+ Emulates an instance of the surface data type. Uses the image_data data
+
+ type of the game engine Love2D.
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">width</span>
+         the width of the surface in pixels
+        </li>
+        <li><span class="parameter">height</span>
+         the height of the surface in pixels
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+        image_data the surface with the given width and height
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "get_memory_use"></a>
+    <strong>get_memory_use ()</strong>
+    </dt>
+    <dd>
+    Supposed to return the memory usage of the application.  Not implemented in the emulator
+
+ Supposed to return the memory usage of the application. Not implemented in the emulator
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "get_memory_limit"></a>
+    <strong>get_memory_limit ()</strong>
+    </dt>
+    <dd>
+    Supposed to returns the maximum bytes of graphics memory the application is allowed to use.
+
+ Supposed to returns the maximum bytes of graphics memory the application is allowed to use. Not
+
+ implemented in the emulator.
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "update"></a>
+    <strong>update ()</strong>
+    </dt>
+    <dd>
+    Makes any pending changes to the screen visible.
+
+ Makes any pending changes to the screen visible.
+
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "loadpng"></a>
+    <strong>loadpng (path)</strong>
+    </dt>
+    <dd>
+    Emulates the gfx.loadpng(path) function from the Zenterio API.
+
+ Emulates the gfx.loadpng(path) function from the Zenterio API. Uses the game
+
+ engine Love2D to realize the function.
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">path</span>
+         the path to the image intended to use
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "loadjpeg"></a>
+    <strong>loadjpeg (path)</strong>
+    </dt>
+    <dd>
+    Emulates the gfx.loadjpeg(path) function from the Zenterio API.
+
+ Emulates the gfx.loadjpeg(path) function from the Zenterio API. Uses the game
+
+ engine Love2D to realize the function.
+
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">path</span>
+         the path to the image intended to use
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.3</a></i>
+<i style="float:right;">Last updated 2014-12-08 11:05:03 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>

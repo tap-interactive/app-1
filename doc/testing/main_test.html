@@ -1,0 +1,466 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>TAP interactive - App 1</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>TAP interactive - App 1</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#Functions">Functions</a></li>
+</ul>
+
+
+<h2>Testing</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><strong>main_test</strong></li>
+  <li><a href="../testing/view_test.html">view_test</a></li>
+</ul>
+<h2>Emulator</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../emulator/gfx.html">gfx</a></li>
+  <li><a href="../emulator/rcu.html">rcu</a></li>
+  <li><a href="../emulator/surface.html">surface</a></li>
+  <li><a href="../emulator/cron.html">cron</a></li>
+  <li><a href="../emulator/classy.html">classy</a></li>
+  <li><a href="../emulator/config.html">config</a></li>
+</ul>
+<h2>Printer</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../printer/printer.html">printer</a></li>
+</ul>
+<h2>Modules</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../modules/Controller.html">Controller</a></li>
+  <li><a href="../modules/View.html">View</a></li>
+  <li><a href="../modules/Model.html">Model</a></li>
+  <li><a href="../modules/table_functions.html">table_functions</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Testing <code>main_test</code></h1>
+<p>The Main test module
+handles all tests for the main module</p>
+<p></p>
+
+
+<h2><a href="#Functions">Functions</a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#TestMain:test_menu_start">TestMain:test_menu_start ()</a></td>
+	<td class="summary">testing that game state is set to "menu"
+ testing that game state is set to "menu"</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TestMain:test_reset_game">TestMain:test_reset_game ()</a></td>
+	<td class="summary">testing that game is reseted
+ testing that game is reseted</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TestMain:test_set_game_length">TestMain:test_set_game_length ()</a></td>
+	<td class="summary">testing that the game length
+ testing that the game length is equal to the chosen game alternative</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TestMain:test_init_players">TestMain:test_init_players ()</a></td>
+	<td class="summary">testing that all initial conditions for initialized players
+ creates a local variable for number_of_players to iterate through in order to check the different length, height, answer and points initialized dependent on how many players that have been selected</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TestMain:test_change_setting">TestMain:test_change_setting ()</a></td>
+	<td class="summary">testing the ability to change menu setting
+ steps through the different highlighted indexes</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TestMain:test_change_alternative">TestMain:test_change_alternative ()</a></td>
+	<td class="summary">testing the ability to change menu alternatives
+ steps through the different highlighted indexes</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TestMain:test_add_point">TestMain:test_add_point (player_id)</a></td>
+	<td class="summary">checks if a point has been added
+ checks if a point has been added upon calling the add_point function for every player in the table</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TestMain:test_remove_point">TestMain:test_remove_point (player_id)</a></td>
+	<td class="summary">checks if a point has been removed
+ checks if a point has been removed upon calling the remove_point function for every player in the table</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TestMain:test_onKey">TestMain:test_onKey ()</a></td>
+	<td class="summary">Tests all possible inputs for pressing a button
+Tests that for a given button that we press we get the expected output
+Checks that the corresponding highlighted index also matches for where we stand in the menu</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TestMain:test_check_win">TestMain:test_check_win ()</a></td>
+	<td class="summary">Testing the check win functionality
+ Initializes 6 players and tests for 1-6 winners</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TestMain:test_get_question">TestMain:test_get_question ()</a></td>
+	<td class="summary">Checks to see if get_question finds the correct question.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TestMain:test_add_point">TestMain:test_add_point (player_id)</a></td>
+	<td class="summary">checks if a point has been added
+ checks if a point has been added upon calling the add_point function for every player in the table</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TestMain:test_remove_point">TestMain:test_remove_point (player_id)</a></td>
+	<td class="summary">checks if a point has been removed
+ checks if a point has been removed upon calling the remove_point function for every player in the table</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TestMain:test_execute_turn">TestMain:test_execute_turn ()</a></td>
+	<td class="summary">Test to see that the game can execute a turn
+Checking if the game executes in a correct way at the start of a round,
+when the first player is answering a question.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TestMain:test_change_current_player">TestMain:test_change_current_player ()</a></td>
+	<td class="summary">Checks if we change the current player
+Checks if we change the current player by iterating through the max number of player</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TestMain:test_init_categories">TestMain:test_init_categories ()</a></td>
+	<td class="summary">Checks if we change the current player
+Checks if we change the current player by iterating through the max number of player</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TestMain:test_init_bananas">TestMain:test_init_bananas ()</a></td>
+	<td class="summary">Checks if we change the current player
+Checks if we change the current player by iterating through the max number of player</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2><a name="Functions"></a>Functions</h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "TestMain:test_menu_start"></a>
+    <strong>TestMain:test_menu_start ()</strong>
+    </dt>
+    <dd>
+    testing that game state is set to "menu"
+ testing that game state is set to "menu"
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TestMain:test_reset_game"></a>
+    <strong>TestMain:test_reset_game ()</strong>
+    </dt>
+    <dd>
+    testing that game is reseted
+ testing that game is reseted
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TestMain:test_set_game_length"></a>
+    <strong>TestMain:test_set_game_length ()</strong>
+    </dt>
+    <dd>
+    testing that the game length
+ testing that the game length is equal to the chosen game alternative
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TestMain:test_init_players"></a>
+    <strong>TestMain:test_init_players ()</strong>
+    </dt>
+    <dd>
+    testing that all initial conditions for initialized players
+ creates a local variable for number_of_players to iterate through in order to check the different length, height, answer and points initialized dependent on how many players that have been selected
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TestMain:test_change_setting"></a>
+    <strong>TestMain:test_change_setting ()</strong>
+    </dt>
+    <dd>
+    testing the ability to change menu setting
+ steps through the different highlighted indexes
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TestMain:test_change_alternative"></a>
+    <strong>TestMain:test_change_alternative ()</strong>
+    </dt>
+    <dd>
+    testing the ability to change menu alternatives
+ steps through the different highlighted indexes
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TestMain:test_add_point"></a>
+    <strong>TestMain:test_add_point (player_id)</strong>
+    </dt>
+    <dd>
+    checks if a point has been added
+ checks if a point has been added upon calling the add_point function for every player in the table
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">player_id</span>
+         the id of the player tested
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TestMain:test_remove_point"></a>
+    <strong>TestMain:test_remove_point (player_id)</strong>
+    </dt>
+    <dd>
+    checks if a point has been removed
+ checks if a point has been removed upon calling the remove_point function for every player in the table
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">player_id</span>
+         the of the player tested
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TestMain:test_onKey"></a>
+    <strong>TestMain:test_onKey ()</strong>
+    </dt>
+    <dd>
+    Tests all possible inputs for pressing a button
+Tests that for a given button that we press we get the expected output
+Checks that the corresponding highlighted index also matches for where we stand in the menu
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TestMain:test_check_win"></a>
+    <strong>TestMain:test_check_win ()</strong>
+    </dt>
+    <dd>
+    Testing the check win functionality
+ Initializes 6 players and tests for 1-6 winners
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TestMain:test_get_question"></a>
+    <strong>TestMain:test_get_question ()</strong>
+    </dt>
+    <dd>
+    Checks to see if get_question finds the correct question.
+Will remove all but one question in the all_questions tale and check to see
+if the function retrieves that questions and that it is in the correct format.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TestMain:test_add_point"></a>
+    <strong>TestMain:test_add_point (player_id)</strong>
+    </dt>
+    <dd>
+    checks if a point has been added
+ checks if a point has been added upon calling the add_point function for every player in the table
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">player_id</span>
+         the id of the player tested
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TestMain:test_remove_point"></a>
+    <strong>TestMain:test_remove_point (player_id)</strong>
+    </dt>
+    <dd>
+    checks if a point has been removed
+ checks if a point has been removed upon calling the remove_point function for every player in the table
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">player_id</span>
+         the id of the player tested
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TestMain:test_execute_turn"></a>
+    <strong>TestMain:test_execute_turn ()</strong>
+    </dt>
+    <dd>
+    Test to see that the game can execute a turn
+Checking if the game executes in a correct way at the start of a round,
+when the first player is answering a question.  The test will then check if
+it works properly  for the last player.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TestMain:test_change_current_player"></a>
+    <strong>TestMain:test_change_current_player ()</strong>
+    </dt>
+    <dd>
+    Checks if we change the current player
+Checks if we change the current player by iterating through the max number of player
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TestMain:test_init_categories"></a>
+    <strong>TestMain:test_init_categories ()</strong>
+    </dt>
+    <dd>
+    Checks if we change the current player
+Checks if we change the current player by iterating through the max number of player
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TestMain:test_init_bananas"></a>
+    <strong>TestMain:test_init_bananas ()</strong>
+    </dt>
+    <dd>
+    Checks if we change the current player
+Checks if we change the current player by iterating through the max number of player
+
+
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.3</a></i>
+<i style="float:right;">Last updated 2014-12-08 11:05:03 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
